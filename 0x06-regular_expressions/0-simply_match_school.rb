@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
 # Get the argument passed to the script
-arg = ARGV[0]
+input = ARGV[0]
 
 # Define the regular expression to match against
-regex = /School/
+regex = Oniguruma::ORegexp.new('School')
 
 # Use the regular expression to match against the argument
-if arg =~ regex
-  puts "The argument matches the regular expression!"
+if regex.match(input)
+  puts "The string '#{input}' matches the regular expression 'School'"
 else
-  puts "The argument does not match the regular expression."
+  puts "The string '#{input}' does not match the regular expression 'School'"
 end
