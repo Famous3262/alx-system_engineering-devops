@@ -2,9 +2,9 @@
 # Prints "Best School" 10 times using while loop
 # and on the ninth iteration, prints "Hi"
 
-n=0
+n=1
 
-while [ "$n" -lt 10 ]; do
+while [ "$n" -lt 11 ]; do
   echo "Best School"
   
   # if statement to print Hi when n is 9
