@@ -3,6 +3,7 @@
 hot posts of a given Reddit subreddit."""
 
 import requests
+import json
 
 
 def count_words(subreddit, word_list, after="", count=[]):
