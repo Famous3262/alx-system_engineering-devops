@@ -7,13 +7,13 @@ of subscribers for a given subreddit
 import requests
 
 def number_of_subscribers(subreddit):
-"""Return the total number of subscribers on a given subreddit."""
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {'User-Agent': 'Mozilla/5.0'}
-    response = requests.get(url, headers=headers,
-			    allow_redirects=False)
+    """Return the total number of subscribers on a given subreddit."""
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {"User-Agent": "Google Chrome Version 81.0.4044.129"}
+    response = requests.get(url, headers=headers)
+
     if response.status_code == 200:
         data = response.json()
-        return data['data']['subscribers']
+        return data["data"]["subscribers"]
     else:
         return 0
